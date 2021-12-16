@@ -1,3 +1,3 @@
 # chat_server
 
-A server for chatting
+Chatting with the bean boys
