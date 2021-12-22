@@ -1,3 +1,6 @@
+from datetime import datetime
 from django.db import models
 
-# Create your models here.
+class Msg(models.Model):
+    pub_date = models.DateTimeField('date published', default=datetime.today())
+    words = models.TextField(default=' ')
