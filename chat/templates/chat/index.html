@@ -10,9 +10,14 @@
     <body>
         <div id="edge">
 
-            <div id="chatbox"></div>
+            <div id="chatbox">
+                {% for message in msgList %}
+                    <p> {{ message.pub_date }}: {{ message.words }} </p>
+                {% endfor %}
+            </div>
 
-            <form name="message" action="">
+            <form name="message" action="{% url 'chat:posting' %}" method="post">
+                {% csrf_token %}
                 <input name="usermsg" type="text" id="usermsg" />
                 <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
             </form>
