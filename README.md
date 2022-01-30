@@ -1,3 +1,3 @@
-# chat_server
+# BeanBox
 
 Chatting with the bean boys
